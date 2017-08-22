@@ -1,6 +1,6 @@
 # Toolbox
 
-This Repo is a collection of most frequentkly used code blocks for specific things like:-
+This Repo is a collection of most frequently used code blocks for specific things like:-
 
 1. Ajax Request.
 2. A full screen landing page.
