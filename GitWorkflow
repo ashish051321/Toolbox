@@ -96,3 +96,8 @@ git@github.com:peter/first_app.git. Once you do this, in your push commands, you
 > git push  <REMOTENAME> <BRANCHNAME> 
 
 > git push origin master
+
+
+//getting code from a github repository. Very simple. Just do a git clone.
+> git clone <rep_url>
+
