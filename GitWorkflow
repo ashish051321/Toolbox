@@ -1,0 +1,98 @@
+> git init
+
+//suppose in your project directory, there is another folder called "node_modules" and you dont want git to add commit and track this folder, then you must create a 
+
+.gitignore file and put the following line inside that file:-
+
+/node_modules
+
+
+//Setting the user.name and user.email in git
+> git config user.name ashish051321
+
+> git config user.email ashish.25jl@gmail.com
+
+//Now you start workign on your project and create a bunch of files. 
+// Now you want to commit the changes to the master branch.
+// THe master branch is the default branch.
+
+
+> git add .
+> git commit -a -m "Changes cmoitted to the repository for the first time"
+
+
+//To check  the curent status of git file tracking
+> git status
+
+
+
+// To create a new branch
+> git branch newBranch1
+
+
+
+//Switching to the new branch
+> git checkout newBranch1
+
+
+
+//Creating and checking out to a new branch in one go:-
+> git checkout -b <new_branch>
+
+
+// Listing all the branches in your repository
+> git branch
+
+
+
+// Adding remotes to git- The entire concept:-
+/*
+
+To see which remote servers you have configured, you can run the git remote command. It lists the shortnames of each remote handle you’ve specified. If you’ve cloned 
+
+your repository, you should at least see origin — that is the default name Git gives to the server you cloned from.
+
+To see the url of the remote:-
+
+git remote -v
+
+
+
+Question: Now, suppose, I am clonign a github repo which has got multiple branches. WIll all the branches as well get cloned or only the master branch ?
+> git clone https://github.com/ashish051321/rxjs-project.git
+
+
+Adding a new remote:-
+
+The git remote add command takes two arguments:
+
+A remote name, for example, origin
+A remote URL, for example, https://github.com/user/repo.git
+
+
+> git remote add origin https://github.com/user/repo.git
+
+What is git remote add ...
+
+As you probably know, git is a distributed version control system. Most operations are done locally. To communicate with the outside world, git uses what are called 
+
+remotes. These are repositories other than the one on your local disk which you can push your changes into (so that other people can see them) or pull from (so that 
+
+you can get others changes). The command git remote add origin git@github.com:peter/first_app.gitcreates a new remote called origin located at 
+
+git@github.com:peter/first_app.git. Once you do this, in your push commands, you can push to origin instead of typing out the whole URL.
+
+
+
+//See all the remotes that you  have configured so far:-
+> git remote -v
+
+
+*/
+
+
+//Pushing to a remote:-
+
+> git push  <REMOTENAME> <BRANCHNAME> 
+
+> git push origin master
