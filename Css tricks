@@ -12,3 +12,15 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
 
 ===========================================================================
 
+How do I auto-resize an image to fit a div container
+
+ div.herocontainer img {
+      width: 100%;
+      height: 100%;
+}
+
+This will stretch and distort the image to fit the container.
+
+
+===========================================================================
+
