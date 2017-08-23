@@ -1,0 +1,23 @@
+NPM:-(.npmrc file - that you can find in c:\users\<username> as a hidden file)
+
+proxy=http://username:password@jbbwifp01.jetblue.com:8080/
+http-proxy= http://username:password@jbbwifp01.jetblue.com:8080/
+https-proxy=http://username:password@jbbwifp01.jetblue.com:8080/
+registry=http://registry.npmjs.org/
+unsafe-perm=true
+strict-ssl=false
+
+===============================================================
+git:-(.gitconfig file - that you can find in c:\users\<username> as a hidden file)
+
+[http]
+	proxy = http://username:password@jbbwifp01.jetblue.com:8080/
+[https]
+	proxy = https://username:password@jbbwifp01.jetblue.com:8080/
+===============================================================
+Note:-
+1. Many a times there are special characters in the password. You cannot put those in the string. You need to use the
+corresponding code for the same.
+Example : Instead of @, use %40
+
+2.  The = characters above are not to be made part of the file contents
