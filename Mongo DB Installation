@@ -53,3 +53,26 @@ Pandey",email:"pramod.pandey@gmail.com"}])
 ==============================================================================================================================
 
 
+Importing a json file in MongoDB using mongo import command:-
+
+> mongoimport --db custdb --collection users < MOCK_DATA.json
+
+Note: Your json data should be in the format:-
+
+{
+"mydata": 
+    [
+    {
+          "project": "project_1",
+          ...
+          "priority": 7
+    }
+    ]
+}
+
+
+
+Note:  
+Perhaps the following reference from the MongoDB project blog could help you gain insight on how arrays work in Mongo:
+http://blog.mongolab.com/2013/04/thinking-about-arrays-in-mongodb/
+
