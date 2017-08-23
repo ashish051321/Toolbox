@@ -41,7 +41,7 @@
 
 
 // Listing all the branches in your repository
-> git branch
+> git branch -a
 
 
 
