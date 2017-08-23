@@ -1,0 +1,55 @@
+This guide is based on my experience of installign and running MongoDB on Windows 7 Enterprise Edition - 64 bit  Operating System.
+
+Steps:-
+
+1. Download Community Edition of Mongodb from the following link or google.
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+
+2. Install the using default settings.
+
+3. Create the fodler structure on your machine c:\data\db
+* Not sure, what to do if you don's have a c drive. I guess, if your installation directory is D:\ProgramFiles\Mongo then you need to 
+create the folder structure  D:\data\db
+
+4.Go to the bin folder of mongodb installation and run the following command:-
+> mongod.exe --storageEngine=mmapv1
+
+The server should start.
+
+5. Now we want to use the server. open another cmd prompt and navigate to the bin folder. and run
+the command:-
+> mongo
+
+This should start a mongo console where you can use a varierty of commands to use the database.
+
+==================MongoDB installation is complete. Your Mongo instance is running====================
+Before you proceed, understand the architechture of data storage in MongoDB.
+1. Mongo has multiple databases.
+2.  Each database can have multiple collections. A collection is equivalent to a RDBMS table.
+3. Each collection can have data stored in dofferent formats, most commonly as objects.
+Example insert code:-
+db.users.insert({x:1,y:2});
+
+
+==================Now, you can use the belowgiven set of basic commands to play around==================
+
+> show dbs// shows all the databases.
+
+> use customerapp ///to create a new database and switch to it
+
+> db.createCollection('users')//create a new collection
+//Collection - A grouping of MongoDB documents. A collection is the equivalent of an RDBMS table.
+//A collection exists within a single database. Collections do not enforce a schema.
+
+> show collections //displays all the collections in a database.
+
+> db.users.insert([{fullname:"Ashish Mishra",email:"as.mishra@gmail.com"},{fullname:"Pramd
+Pandey",email:"pramod.pandey@gmail.com"}])
+//THis was to insert entries in the mongodb database.
+
+> db.users.find()//displays all the entries
+
+
+==============================================================================================================================
+
+
