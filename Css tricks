@@ -24,3 +24,21 @@ This will stretch and distort the image to fit the container.
 
 ===========================================================================
 
+Now expanding this image to become big on hover. This is simeple but the glitch that happens 
+is that the bigger image, no matter how big z-index value you assign to it, gets hidden behind other 
+elements on the page. To avaoid this, the trick is to use float:left and position relative.
+
+    div.herocontainer img {
+      width: 100%;
+      height: 100%;
+    }
+
+    div.herocontainer img:hover {
+      z-index: 999;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      float: left;//things that keep the image on top
+      position: relative;//things that keep the image on top
+    }
+===========================================================================
