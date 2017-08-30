@@ -56,3 +56,19 @@ Overlay on some portion of screen:-
    
   background: rgba(0,0,0,0.5);
 }
+
+==========================================================
+To make all the column heights same in bootstrap:-
+
+  <style>
+    .row {
+      overflow: hidden;
+    }
+
+    [class*="col-"] {
+      margin-bottom: -99999px;
+      padding-bottom: 99999px;
+    }
+  
+  </style>
+
