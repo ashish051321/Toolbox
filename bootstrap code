@@ -1,0 +1,19 @@
+-----> Fullscreen column on every device:-
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col-12" id="maincolumn">
+        This is a column width with 12.
+    </div>
+</div>
+</div>
+
+Correponding css:-
+
+#maincolumn{
+height: 100vh;
+}
+
+---------------------------
+
+
