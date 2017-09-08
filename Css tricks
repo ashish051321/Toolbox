@@ -50,7 +50,7 @@ https://codepen.io/onion2k/pen/dbjgw
 
 Overlay on some portion of screen:-
 
-#overlay {
+div#someclass::before {
   position: absolute;
   top: 0; right: 0; left: 0; bottom: 0;
    
@@ -71,4 +71,103 @@ To make all the column heights same in bootstrap:-
     }
   
   </style>
+
+========================================
+
+Some important concepts with respect to UI and Bootstrap:-
+
+1. overlay should be implemented using the "before" pseudo-class.
+
+div#CompanyAdvertise::before
+{
+
+
+position: absolute;
+
+top: 0; 
+right: 0;
+left: 0; 
+bottom: 0;
+
+background: rgba(0,0,0,0.5);
+content:"";
+
+
+}
+
+
+Note, post this, whatever you type inside the div, will appear shrouded by the overlay.
+To do this, palce another div or span inside the original div and set its "position" to "relative". This should fix the z-index issue.
+
+
+2.  Stretching an image to cover the entire div:-
+
+div#CompanyAdvertise
+{
+
+
+background: url("login-page-image.jpg");
+
+background-size: cover; // this is the important property
+background-attachment: scroll;
+
+background-position: center center;
+
+
+}
+
+
+Please note the effect here:- Whatever be the size of the image, it will be stretched to fit the container of which it is set the background image of.
+Very handy tool.
+
+3. In bootstrap v4, the column classes are :-
+
+col-xl-4 
+col-lg-4 
+col-md-4
+col-sm-4
+col-xs-4 ---> No..... This has been converted to col-4
+
+So, if you want the size of a column to stay 4, for all the screens, then use "col-4"
+
+4. In Bootstrap, suppose you have a single column col-lg-4 inside a row, and you want to center align it in the row, then you just have to use:-
+
+class = "mx-auto"
+Note, this will work only if you have one column in a row.
+
+5. Now, suppose you want to center two columns. At this I am not aware if there is another way in bootstrap4, but the following is a work around:-
+
+        <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4  river height80">asd</div>
+                    <div class="col-sm-4 carrot height80">asd</div>
+                    <div class="col-sm-2"></div>
+        </div>
+
+
+I have  just placed twe blank columns on both sides of my column group.
+
+
+6. Now, bootstrap 4 is actually, flexbox based and hence, you  can create special effects by doing something like this:-
+
+        <div class="row" style="justify-content: space-around">
+                    <div class="col-sm-4  river height80">asd</div>
+                   <div class="col-sm-4 carrot height80">asd</div>
+        </div>
+
+7. For screen-full-height for a div, do this:-
+
+height: 100vh;
+
+8. If you dont want the content from your div to spill over or be overshadowed while the screen height is being reduced. use :-
+
+overflow-y : auto;
+
+9. A graceful font for all occassions:-
+
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+===========
+
+
 
