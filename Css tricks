@@ -1,3 +1,11 @@
+-- For bootstrap navbars to occupy the entire width of the page, dont place them under container or container-fluid divs.
+
+-- Bootstrap material Design:-
+
+http://rosskevin.github.io/bootstrap-material-design/components/utilities/
+
+
+
 ===============================card effect===============================
 
 div.container{
