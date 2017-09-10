@@ -19,6 +19,10 @@ The code:-
 <button class="btn btn-warning" data-toggle="collapse" data-target="#one">Toggle</button>
 <div class="bg-success" id="one">lorem100</div>
 
+--If you want the content to be in a collapsed state initially, use the class "collapse".
+
+<button class="btn btn-warning" data-toggle="collapse" data-target="#one">Toggle</button>
+<div class=" collapse bg-success" id="one">lorem100</div>
 
 
 ===============================card effect===============================
