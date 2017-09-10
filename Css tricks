@@ -4,6 +4,21 @@
 
 http://rosskevin.github.io/bootstrap-material-design/components/utilities/
 
+-- Bootstrap collapse plugin:-
+Theory:-
+All you need is:-
+
+1. data-toggle attribute:-
+data-toggle: "collapse"
+
+2. data-target attribute:-
+data-target:"#the_id_of_section_you_want_to_show_and_hide"
+
+The code:-
+
+<button class="btn btn-warning" data-toggle="collapse" data-target="#one">Toggle</button>
+<div class="bg-success" id="one">lorem100</div>
+
 
 
 ===============================card effect===============================
