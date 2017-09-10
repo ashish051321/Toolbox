@@ -1,3 +1,7 @@
+-- For Bootstrap modals, refer this excellent guide:-
+
+https://v4-alpha.getbootstrap.com/components/modal/
+
 -- For bootstrap navbars to occupy the entire width of the page, dont place them under container or container-fluid divs.
 
 -- Bootstrap material Design:-
