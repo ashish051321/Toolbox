@@ -169,5 +169,7 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 
 ===========
 
+10. The "disabled" class:-
 
+In bootstrap, you can disable pretty much anything by adding the class disabled.
 
