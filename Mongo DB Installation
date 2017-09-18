@@ -52,27 +52,110 @@ Pandey",email:"pramod.pandey@gmail.com"}])
 
 ==============================================================================================================================
 
+Using Mongoose:-
 
-Importing a json file in MongoDB using mongo import command:-
+npm install mongoose --save
 
-> mongoimport --db custdb --collection users < MOCK_DATA.json
+Basic Connection:-
 
-Note: Your json data should be in the format:-
+//The Database setup part------------------------------------------------
 
-{
-"mydata": 
-    [
+
+//Import the mongoose module
+var mongoose = require('mongoose');
+
+//Set up default mongoose connection
+var mongoDB = 'mongodb://127.0.0.1/ctdb';
+mongoose.connect(mongoDB);
+
+//Get the default connection
+var db = mongoose.connection;
+
+//Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+
+//The Schema and Model Creation part------------------------------------------------
+//inside the associate.js file:-
+
+// grab the things we need
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+// create a schema
+var associateSchema = new Schema({
+  empid: Number,
+  fullname: String,
+  contact: String,
+  designation: String,
+  experience:Number,
+  manager:String,
+  primarycompetency:String,
+  otherCompetency: [String],
+  certifications:[String],
+  project:[String],
+  location:String,
+  start_date:String,
+  end_date:String
+});
+
+// the schema is useless so far
+// we need to create a model using it
+var Associate = mongoose.model('Associate', associateSchema);
+
+// make this available to our users in our Node applications
+module.exports = Associate;
+
+//Using the schema to do vasious operations------------------------------------------------
+
+--------------------------------------------------------------------------------create opeartion
+var Associate = require('associate');
+
+var newAssociate = new Associate({
+name:"Ashish"
+});
+
+ newAssociate.save(function(err) {
+        if (err) throw err;
+      
+        console.log('Associate saved successfully !!!!');
+      });
+	  
+--------------------------------------------------------------------------------find operation
+
+ User.find({region: "NA",sector:"Some Sector"}, function(err, user) 
+ {
+    if (err)
     {
-          "project": "project_1",
-          ...
-          "priority": 7
+        res.send(err);
     }
-    ]
-}
+    console.log(user);
+    res.json(user);
+
+ });
+});
+
+//Just one document
+
+Post.findOne(criteria, function(error, post) {
+  ...
+})
 
 
 
-Note:  
-Perhaps the following reference from the MongoDB project blog could help you gain insight on how arrays work in Mongo:
-http://blog.mongolab.com/2013/04/thinking-about-arrays-in-mongodb/
+--------------------------------------------------------------------------------Update operation
+Post.findOne(criteria, function(error, post) {
+  post.set()
+  post.save(function(error, document){
+    ...
+  })
+})
+
+
+--------------------------------------------------------------------------------Update operation
+Post.findOne(criteria, function(error, post) {
+  post.remove(function(error){
+    ...
+  })
+})
 
