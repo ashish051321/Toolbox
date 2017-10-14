@@ -159,3 +159,27 @@ Post.findOne(criteria, function(error, post) {
   })
 })
 
+=======================================================================
+
+MongoDB commands:-
+
+show dbs
+
+use ctdb //enter ctdb to use and see the collections inside
+
+show collections//once you are inside a database, use this command to see all the collections present.
+
+db.associates.find().pretty()//to see a pretier dump of content of associates collection
+
+db.associates.find({empid:'899104'}).pretty() // conditional view
+
+db.associates.drop()//to delete the collection
+
+To drop an entire database, say ctdb
+
+> use ctdb
+
+> db.dropDatabase()
+
+------------------------------------------------
+
