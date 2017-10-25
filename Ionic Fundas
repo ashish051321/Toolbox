@@ -19,4 +19,40 @@ Ionic Tabs inside tabs using ion-segment:-
 
 
 ----------------------------------------------------
+This ion segment will be fixed at the top and will not move. with the scrolling content !!!
+
+
+****************************************************************************
+
+Creating an overlay:-
+
+</ion-content>
+<!-- That is outside everything in the template file, we place the overlay div -->
+
+<div class="overlay" *ngIf="showOverlay">
+      Refreshing...
+      <br><img src="../../assets/icon/loading.gif"    alt="">
+</div>
+
+The correponding styling for the overlay:-
+
+  .overlay {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+    color:white;
+    text-align:center;
+    line-height:120px;
+    font-size: 26px;
+  }
+
+
+
+
 
