@@ -1,0 +1,22 @@
+Ionic Tabs inside tabs using ion-segment:-
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Chat-Box News</ion-title>
+  </ion-navbar>
+
+  <ion-segment class="ionsegmentclass" [(ngModel)]="newstype">
+    <ion-segment-button value="allnews">
+      All News
+    </ion-segment-button>
+    <ion-segment-button value="subnews">
+      Subscribed News
+    </ion-segment-button>
+
+  </ion-segment>
+
+</ion-header>
+
+
+----------------------------------------------------
+
