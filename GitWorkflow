@@ -51,9 +51,20 @@
 To see which remote servers you have configured, you can run the git remote command. It lists the shortnames of each remote 
 handle you’ve specified. If you’ve cloned  your repository, you should at least see origin — that is the
 default name Git gives to the server you cloned from.
-To see the url of the all the remotes you have:-
 
+
+To see the url of the all the remotes you have:-
 > git remote -v
+
+
+To get all the branches of your git repository:-
+> git init
+> git remote add origin <<URL>>
+> git fetch --all
+// This fetches all the banches for this repository.
+// Now, you can go to the branch of your choosing, by checking out into it, like this:-
+
+> git checkout <<branch_name>>
 
 
 Question: Now, suppose, I am clonign a github repo which has got multiple branches. WIll all the branches as well get cloned or only the master branch ?
