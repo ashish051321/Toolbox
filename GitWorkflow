@@ -82,6 +82,21 @@ A remote URL, for example, https://github.com/user/repo.git
 
 ================================================================================
 
+--> Edit the remote branch url:-
+
+git remote set-url origin https://github.com/ashish051321/ashish051321.github.io.git
+
+================   MERGING  ==============================================
+--> How to merge your development branch into the master branch:-
+
+(on branch development)$ git merge master
+(resolve any merge conflicts if there are any)
+git checkout master
+git merge development (there won't be any conflicts now)
+
+================================================================================
+
+
 Question: What is git remote add ...
 Answer: As you probably know, git is a distributed version control system. Most operations are done locally. 
 To communicate with the outside world, git uses what are called remotes. These are repositories other than 
