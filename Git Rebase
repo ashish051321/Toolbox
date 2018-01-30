@@ -6,8 +6,9 @@ Navigate to your branch. Make changes and commit to the remote feature branch as
 Here, you will be shown the list of all your past commits. You must squash all but one.
 Its a VIM based user interface, so use ESC : wq for saving your inputs.
 
-3 > If conflict occur. Make changes and save.
-then do:-
+3 > If conflict occur. Make changes and save. Resolving conflicts can mean a lot of things like, keeping your changes 
+and deleting the changes made by others.
+After you have made the changes, then do:-
 > git add .
 
 4. > git rebase --continue
