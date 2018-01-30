@@ -1,0 +1,22 @@
+Navigate to your branch. Make changes and commit to the remote feature branch as well.
+
+1 > git fetch origin master
+
+2 > git rebase -i origin/master
+Here, you will be shown the list of all your past commits. You must squash all but one.
+Its a VIM based user interface, so use ESC : wq for saving your inputs.
+
+3 > If conflict occur. Make changes and save.
+then do:-
+> git add .
+
+4. > git rebase --continue
+
+5 > Repeat Step 3 and 4, till your git rebase is successful.
+
+Run your code and verify, everything is working fine. then push your code:-
+
+> git push -f
+
+6 > Then go to bitbucket/git and raise a pull request.
+
