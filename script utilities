@@ -1,0 +1,17 @@
+1 ===============================
+Implementing a page scroll progress bar:-
+
+    $(window).scroll(function() {
+      var wintop = $(window).scrollTop(), docheight = $('body').height(), winheight = $(window).height();
+      console.log(wintop);
+      var totalScroll = (wintop/(docheight-winheight))*100;
+      console.log("total scroll" + totalScroll);
+      $("div.pagePrgressBar").css("width",totalScroll+"%");
+    });
+  
+  /** Note: Tried implementing this in vanilla javascript but, it is far easier and most consistent across browsers in jquery.
+  Use jquery slim version for inclusion into your page. **/
+  
+  
+  ===============================
+  
