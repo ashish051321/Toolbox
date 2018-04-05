@@ -30,3 +30,21 @@ function loadData(url: string) {
         }
 
 ---------------------------------------------------------------------------------
+
+//----Reading an image file and diplaying it in the document.
+// Note:- the file size remain intact.
+// The file is read and displayed as dataURL.
+// Data URLs, URLs prefixed with the data: scheme, allow content creators to embed small files inline in documents.
+
+function showImagePreview(imagefile) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    qs('#imagePreview').style.display = "initial";
+                    qs('#imagePreview').setAttribute('src', e.target.result);
+                }
+
+                reader.readAsDataURL(imagefile);
+
+            }
+            
+            
