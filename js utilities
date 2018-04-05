@@ -1,0 +1,32 @@
+//Making an http get request using ajax:-
+
+function loadData(url: string) {
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.send();
+        xhr.addEventListener("load", function () 
+        {
+            if (xhr.status === 200) {
+                let data = JSON.parse(xhr.responseText);
+            }
+            else{
+                return("some network / file issue.");
+            }
+        
+       }
+}//loadData ends
+
+
+---------------------------------------------------------------------------------
+//Calculating the size of a file selected and whos initial size is given in bytes.
+
+
+        function getSize(mf) {//mf is myfile from the file input element in html
+            var _size = mf.size;
+            var fSExt = new Array('Bytes', 'KB', 'MB', 'GB'), i = 0;
+            while (_size > 900) { _size /= 1024; i++; }
+            var exactSize = (Math.round(_size * 100) / 100) + ' ' + fSExt[i];
+            return (exactSize);
+        }
+
+---------------------------------------------------------------------------------
