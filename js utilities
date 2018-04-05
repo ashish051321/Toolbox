@@ -48,3 +48,7 @@ function showImagePreview(imagefile) {
             }
             
             
+// Accept only images as file input
+
+<input type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg" />
+
