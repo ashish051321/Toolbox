@@ -14,6 +14,12 @@ create the folder structure  D:\data\db
 4.Go to the bin folder of mongodb installation and run the following command:-
 > mongod.exe --storageEngine=mmapv1
 
+Also, on a windows machine, you could create a bat file and save it on ur desktop to quickly fireup mongodb when you need it.
+The content of the bat files:-
+
+"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --storageEngine=mmapv1
+
+
 The server should start.
 
 5. Now we want to use the server. open another cmd prompt and navigate to the bin folder. and run
